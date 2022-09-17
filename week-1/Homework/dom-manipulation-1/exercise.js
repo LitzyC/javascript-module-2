@@ -12,6 +12,7 @@ console.log(first);
 const jumbotron = document.querySelector("#jumbotron-text");
 console.log(jumbotron);
 
+console.log(document.querySelector(".primary-content").querySelectorAll("p"));
 
 /*
 Task 1
