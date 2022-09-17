@@ -1,3 +1,18 @@
+/*document.querySelector('#content').addEventListener('submit', (e) => {
+    e.preventDefault()  
+})*/
+
+const nodop = document.querySelectorAll("p");
+console.log(nodop);
+
+const divlist = document.querySelectorAll("div");
+const first = divlist[0];
+console.log(first);
+
+const jumbotron = document.querySelector("#jumbotron-text");
+console.log(jumbotron);
+
+
 /*
 Task 1
 =======
@@ -24,6 +39,12 @@ Task 2
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
 
+let myButton = document.querySelector("#alertBtn");
+myButton.addEventListener("click", alertSomething);
+
+function alertSomething() {
+  alert("Thanks for visiting Bikes for Refugees!");
+}
 
 /*
 Task 3
@@ -31,6 +52,17 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
+let mybuttoncolour = document.querySelector("#bgrChangeBtn");
+mybuttoncolour.addEventListener("click", changeColour);
+
+function changeColour() {
+  if("click" === 1){
+    mybuttoncolour.style.backgroundColor = "red";
+}else if("click" === 2){
+    mybuttoncolour.style.backgroundColor = "green";
+}
+}
+
 
 
 /*
