@@ -15,6 +15,9 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  const h1 = document.createElement('h1');
+  const text = "Litzy"; 
+  h1.textContent = text
 }
 
 /**
