@@ -15,9 +15,19 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-  const h1 = document.createElement('h1');
-  const text = "Litzy"; 
-  h1.textContent = text
+  //For Each, entrar a la array y mostrarlo.
+  arrayOfPeople.forEach(element => {
+    //variables creando el encabezado
+    let huno = document.createElement('h1');
+    let hdos = document.createElement('h2');
+    //TextContext asignar al encabezado que creamos.
+    huno.textContent = element.name;
+    hdos.textContent = element.job;
+    //Muestra de lo creado
+    content.appendChild(huno);
+    content.appendChild(hdos);
+  });
+  
 }
 
 /**
@@ -27,6 +37,7 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
+
 function exerciseTwo(shopping) {
   //Write your code in here
 }
