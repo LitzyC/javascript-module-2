@@ -13,8 +13,10 @@
  *      .....
  * </div>
  */
+
+let content = document.querySelector("#content");
+
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
   //For Each, entrar a la array y mostrarlo.
   arrayOfPeople.forEach(element => {
     //variables creando el encabezado
@@ -27,7 +29,6 @@ function exerciseOne(arrayOfPeople) {
     content.appendChild(huno);
     content.appendChild(hdos);
   });
-  
 }
 
 /**
@@ -40,6 +41,20 @@ function exerciseOne(arrayOfPeople) {
 
 function exerciseTwo(shopping) {
   //Write your code in here
+  //Limpiar o vaciar la pagina.
+  //content.innerHTML=""
+  let list = document.createElement('ul');
+  content.appendChild(list);
+  
+  // let label = document.createElement('label');
+  // content.appendChild(label);
+  // label.innerText = "Hola";
+  
+  shopping.forEach(elemento => {
+    let newLI = document.createElement("li");
+    newLI.innerText = elemento;
+    list.appendChild(newLI);
+  })
 }
 
 /**
@@ -73,6 +88,7 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+
 }
 
 //
