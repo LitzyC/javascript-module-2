@@ -40,7 +40,6 @@ function exerciseOne(arrayOfPeople) {
  */
 
 function exerciseTwo(shopping) {
-  //Write your code in here
   //Limpiar o vaciar la pagina.
   //content.innerHTML=""
   let list = document.createElement('ul');
@@ -50,9 +49,9 @@ function exerciseTwo(shopping) {
   // content.appendChild(label);
   // label.innerText = "Hola";
   
-  shopping.forEach(elemento => {
+  shopping.forEach(libro => {
     let newLI = document.createElement("li");
-    newLI.innerText = elemento;
+    newLI.innerText = libro;
     list.appendChild(newLI);
   })
 }
@@ -88,7 +87,38 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  let lista = document.createElement('ul');
+  content.appendChild(lista);
+  
+  
+  //    PUNTO 1
+  // books.forEach(element => {
+    //   //variables creando el parrafo
+    //   let paragraph = document.createElement('p');
+    
+    //   //TextContext asignar al encabezado que creamos.
+    //   paragraph.textContent = element.title + "  -  " +element.author;
+    
+    //   //Muestra de lo creado
+    //   content.appendChild(paragraph);
+    // });
+    
+  books.forEach(libro =>{
+    let li = document.createElement('li');
+    const imagen = document.createElement('img');
+    
+    li.innerText = libro.title + "  -  " + libro.author;
+    imagen.src="../Part-1/images/" + libro.title + ".jpeg";
+    
+    if (books.alreadyRead === true){
+      books.style.backgroundColor = "green";
+    }else if (books.alreadyRead === false){
+      books.style.backgroundColor = "red";
+    }
 
+    lista.appendChild(li);
+    content.appendChild(imagen); 
+  })
 }
 
 //
