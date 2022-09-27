@@ -89,8 +89,7 @@ function exerciseThree(books) {
   //Write your code in here
   let lista = document.createElement('ul');
   content.appendChild(lista);
-  
-  
+
   //    PUNTO 1
   // books.forEach(element => {
     //   //variables creando el parrafo
@@ -105,19 +104,22 @@ function exerciseThree(books) {
     
   books.forEach(libro =>{
     let li = document.createElement('li');
-    const imagen = document.createElement('img');
+    li.innerText = "\n" + libro.title + "  -  " + libro.author + "\n";
+    lista.appendChild(li);
     
-    li.innerText = libro.title + "  -  " + libro.author;
+    let imagen = document.createElement('img');
     imagen.src="../Part-1/images/" + libro.title + ".jpeg";
+    imagen.style.marginLeft = "45%";
+    imagen.style.marginTop = "1px";
+    imagen.style.marginBottom = "10px";
+    li.appendChild(imagen); 
     
-    if (books.alreadyRead === true){
-      books.style.backgroundColor = "green";
-    }else if (books.alreadyRead === false){
-      books.style.backgroundColor = "red";
+    if (libro.alreadyRead === true){
+      li.style.backgroundColor = "green";
+    }else if (libro.alreadyRead === false){
+      li.style.backgroundColor = "red";
     }
 
-    lista.appendChild(li);
-    content.appendChild(imagen); 
   })
 }
 
