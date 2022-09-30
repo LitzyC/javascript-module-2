@@ -2,7 +2,7 @@
 Given the following house - follow the instructions below.
 
 Make sure you run the file after and it outputs the correct results.
-*/
+
 
 let house = {
   address: "1 Kinning Park",
@@ -18,6 +18,15 @@ let house = {
 
   WRITE YOUR CODE BELOW
 */
+let house = {
+  address: "51 Berkley Road",
+  previousOwners: ["Brian M.", "Fiona S."],
+  currentOwner: {
+    firstName: "Margaret",
+    lastName: "Montgomery",
+  },
+};
+
 
 // - change the address of "house" to '51 Berkley Road'
 // - change the previous owners of "house" to ["Brian M.", "Fiona S."]
