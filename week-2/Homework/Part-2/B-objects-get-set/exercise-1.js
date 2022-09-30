@@ -9,4 +9,5 @@ var kitten = {
 };
 
 // YOUR CODE HERE
-
+const json=JSON.stringify(kitten, null, 2)
+console.log(json);
