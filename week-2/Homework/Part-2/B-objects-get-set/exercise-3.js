@@ -4,6 +4,9 @@
 
 // WRITE CODE HERE
 
+let kitten = {
+    name: "Gilbert", 
+};
 
 console.log(kitten.name);
 
