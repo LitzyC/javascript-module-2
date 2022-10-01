@@ -60,12 +60,21 @@ let restaurant1 = {
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
       // Complete here
+      const availableRestaurants= [];
+      
+      this.restaurants.forEach(r => {
+        const availableSeats = r.totalSeats - r.numberOfCustomers;
+        if(availableRestaurants >= numberOfPeople){
+          availableRestaurants.push(r.name);
+        }
+      })
+      return availableRestaurants;
     },
     findRestaurantServingDish: function (dishName) {
-      // Complete here
+      return this.restaurants.filter(r => r.menu.includes(dishName)).map(r => r.name);// Complete here
     },
     countNumberOfRestaurantsInArea: function (area) {
-      // Complete here
+      return this.restaurants.filter(r => r.address.area === area).length;// Complete here
     },
   };
   
