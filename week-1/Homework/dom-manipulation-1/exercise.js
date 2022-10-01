@@ -107,18 +107,18 @@ Task 6
 Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
-*/
+
 
 document.querySelector('#addArticleBtn').addEventListener('click', (e) => {
     e.preventDefault()
 
-    const text = "New Paragraph"; 
-    const p = document.createElement('p');
-    p.textContent = text
-    
-    const articulo = document.querySelector('#mainArticles');
-    articulo.appendChild(p);
-})
+    /*const inputField = document.querySelector('.addArticle')
+    const paragraph = document.createElement('p')
+    paragraph.innerHTML = inputField.value
+    const learnMore = document.querySelector('.heading-underline')
+    learnMore.appendChild(paragraph)
+    inputField.value = ' '
+})*/
 
 
 
@@ -133,3 +133,17 @@ Using the same function in Task 3, every time the 'Change colour' button is clic
 The next color when you are in the last color of the array will be the first color again.
 */
 
+const colors = ['#FAAC9B', '#ECFA9B', '#9BFAC0', '#9BD3FA', '#CAA6C6']
+let count = 0;
+
+function changeColour(){
+    let body = document.querySelector('body');
+    body.style.backgroundColor = colors[count];
+
+    if(count < 5){
+        count ++;
+    }else{
+        count = 0;
+    }
+}
+    
